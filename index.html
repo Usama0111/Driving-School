@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan's Driving School | Get your P's | Driving Test from $180</title>
+    <meta name="description"
+        content="Hassan's Driving School is the best driving school in Melbourne. Our instructors are Former VicRoads testing officers. We know better!">
+
+    <!-- Bootstrap 3 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600|Roboto:400" rel="stylesheet">
+    <!-- Common CSS for header, topbar, footer, colors, etc. -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- Custom Header & Topbar CSS (if you have extra header/topbar styles) -->
+    <link rel="stylesheet" href="css/header-topbar.css">
+
+    <style>
+        /* Only page-specific or section-specific styles below */
+        .hero-section {
+            background-color: #f5f5f5;
+            padding: 100px 0;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .icon-box {
+            margin-bottom: 30px;
+        }
+
+        .icon-box .icon {
+            width: 80px;
+            height: 80px;
+            background-color: #fdfa3a;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 80px;
+            font-size: 28px;
+            float: left;
+            margin-right: 50px;
+        }
+
+        .icon-box h3 {
+            margin-top: 0;
+            font-weight: 500;
+            padding-left: 100px;
+        }
+
+        .icon-box p {
+            padding-left: 100px;
+        }
+
+        .about-section {
+            background-color: #f5f5f5;
+            padding: 80px 0;
+        }
+
+        .about-image {
+            background-image: url('https://imperialdrivingschool.com.au/wp-content/uploads/2022/02/Imperial-Driving-School-woman-sitting-i-car-car-showrrom.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+        }
+
+        .about-content {
+            padding: 10% 8%;
+        }
+
+        .check-list li {
+            margin-bottom: 15px;
+            list-style: none;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .check-list li:before {
+            content: "\f00c";
+            font-family: FontAwesome;
+            color: #fdfa3a;
+            position: absolute;
+            left: 0;
+        }
+
+        .pricing-section {
+            padding: 80px 0;
+        }
+
+        .price-table {
+            background-color: #f5f5f5;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+
+        .price-table:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-table-name {
+            padding: 20px 0;
+        }
+
+        .price-table-name h3 {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .price-table-price {
+            padding: 50px 0 0;
+            background-color: #f4f4f4;
+        }
+
+        .price-table-price .figure {
+            font-size: 34px;
+            font-weight: 600;
+            color: #fdf03a;
+            line-height: 44px;
+        }
+
+        .price-table-features {
+            padding: 30px 25px 50px;
+        }
+
+        .price-table-features ul {
+            padding: 0;
+            list-style: none;
+            text-align: left;
+        }
+
+        .price-table-features ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .price-table-features ul li:before {
+            content: "";
+            display: none;
+        }
+
+        .stats-section {
+            background-image: url('https://imperialdrivingschool.com.au/wp-content/uploads/2018/05/section_bg3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 70px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .stat-box {
+            background-color: white;
+            padding: 22px 20px 27px;
+            margin-bottom: 30px;
+        }
+
+        .stat-box .number {
+            font-size: 52px;
+            font-weight: 600;
+            color: #fde93a;
+            line-height: 62px;
+        }
+
+        .stat-box h4 {
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .gallery-section {
+            padding: 80px 0;
+        }
+
+        .gallery-item {
+            margin-bottom: 30px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .cta-section {
+            background-color: #fafd3a;
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .testimonials-section {
+            padding: 80px 0;
+        }
+
+        .testimonial-box {
+            background-color: #f3f3f3;
+            padding: 40px 50px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .testimonial-box:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 50px;
+            border-top: 20px solid #f3f3f3;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+        }
+
+        .testimonial-author {
+            margin-top: 30px;
+            padding-left: 50px;
+        }
+
+        .testimonial-author h4 {
+            font-weight: 500;
+            color: #333;
+        }
+
+        @media (max-width: 991px) {
+            .about-image {
+                min-height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .icon-box .icon {
+                float: none;
+                margin: 0 auto 20px;
+            }
+
+            .icon-box h3,
+            .icon-box p {
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<!-- ...rest of your HTML remains unchanged... -->
+<!-- ...rest of your HTML remains unchanged... -->
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="top-bar-left">
+                        <!-- You can add something here if needed -->
+                    </div>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <div class="top-bar-right">
+                        <span class="phone">
+                            <a href="tel:+610450984700">
+                                <i class="fa fa-phone"></i>047 020 3553
+                            </a>
+                        </span>
+                        <span class="social-icons">
+                            <a href="https://www.facebook.com/Imperial-Driving-School-107136965240358" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/imperialdrivingschool/" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row" style="display: flex; align-items: center;">
+                <!-- Logo on the left -->
+                <div class="col-xs-12 col-sm-3" style="display: flex; align-items: center;">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="logo.jpeg" alt="Hassan's Driving School - Learn, Drive, Pass"
+                                class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+                <!-- Navigation bar on the right -->
+                <div class="col-xs-12 col-sm-9">
+                    <nav class="navbar navbar-default" style="margin-bottom:0;">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#main-nav">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="main-nav">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="service.html">Service Areas</a></li>
+                                <li><a href="prices.html">Pricing</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li class="book-now-menu"><a href="book.html">Book Now</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ...existing code... -->
+
+    <!-- Hero Section -->
+    <section class="hero-section"
+        style="background: linear-gradient(90deg, #fdd93a 0%, #fffbe7 100%); padding: 90px 0 70px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 style="font-weight:800; color:#222; font-size:48px; margin-bottom:18px;">Hassan's Driving School
+                    </h1>
+                    <h3 style="font-weight:500; color:#444; margin-bottom:32px;">Professional Driving Instructors</h3>
+                    <a href="book.html" class="btn btn-accent btn-lg"
+                        style="background:#fdd93a; color:#222; font-weight:700; border-radius:4px; padding:16px 44px; font-size:22px;">Book
+                        Your Lesson</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" style="background:#fff; padding: 60px 0;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <div class="icon-box"
+                        style="background:#fafafa; border-radius:10px; padding:32px 18px 28px 18px; box-shadow:0 2px 10px rgba(0,0,0,0.04); margin-bottom:30px;">
+                        <div class="icon"
+                            style="background:#fdd93a; color:#fff; width:80px; height:80px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; margin:0 auto 18px auto;">
+                            <i class="fa fa-taxi"></i>
+                        </div>
+                        <h3 style="font-weight:600; color:#222; margin-bottom:12px;">Ex VicRoads Testing Officers</h3>
+                        <p style="color:#555;">All of our instructors are former VicRoads testing officers who will
+                            guide you according to VicRoads criteria, ensuring a high success rate in your driving test.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="icon-box"
+                        style="background:#fafafa; border-radius:10px; padding:32px 18px 28px 18px; box-shadow:0 2px 10px rgba(0,0,0,0.04); margin-bottom:30px;">
+                        <div class="icon"
+                            style="background:#fdd93a; color:#fff; width:80px; height:80px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; margin:0 auto 18px auto;">
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+                        <h3 style="font-weight:600; color:#222; margin-bottom:12px;">Remarkable Success Rate</h3>
+                        <p style="color:#555;">Our instructors' expertise as former VicRoads testing officers ensures
+                            you receive the best guidance and achieve outstanding results.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="icon-box"
+                        style="background:#fafafa; border-radius:10px; padding:32px 18px 28px 18px; box-shadow:0 2px 10px rgba(0,0,0,0.04); margin-bottom:30px;">
+                        <div class="icon"
+                            style="background:#fdd93a; color:#fff; width:80px; height:80px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; margin:0 auto 18px auto;">
+                            <i class="fa fa-thumbs-up"></i>
+                        </div>
+                        <h3 style="font-weight:600; color:#222; margin-bottom:12px;">Driving Test Experts</h3>
+                        <p style="color:#555;">Our experienced instructors provide training that strictly follows
+                            VicRoads criteria, making you fully prepared for your driving test.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+
+    <section class="about-section" style="background: #f9f9f9; padding: 60px 0;">
+        <div class="container">
+            <div class="row" style="align-items: center; display: flex; flex-wrap: wrap;">
+                <div class="col-md-6 col-sm-12" style="padding:0;">
+                    <div class="about-image"
+                        style="background-image: url('https://imperialdrivingschool.com.au/wp-content/uploads/2022/02/Imperial-Driving-School-woman-sitting-i-car-car-showrrom.jpg'); background-size: cover; background-position: center; min-height: 400px; border-radius: 12px;">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 about-content" style="padding: 40px 30px;">
+                    <h2 style="font-weight:700; color:#222;">Imperial Driving School</h2>
+                    <div class="divider"
+                        style="width:80px; height:4px; background:#fdd93a; margin:18px 0 24px 0; border-radius:2px;">
+                    </div>
+                    <p style="font-size:17px; color:#444;">Imperial Driving School Melbourne prides itself on providing
+                        the best driving education. Our experienced and professional driving instructors work tirelessly
+                        to ensure personalized attention and instruction for each student.</p>
+                    <p style="font-size:17px; color:#444;">We hire fully licensed professionals to teach driving and
+                        help students in passing the driving test. Our male and female Driving Instructors are super
+                        friendly and boost the confidence of the students.</p>
+                    <p style="font-size:17px; color:#444;">Our mission is to help our students to become safe and
+                        competent drivers on the road. By emphasizing the importance of drive test success, we send a
+                        clear message to our students that their safety and success on the road is our top priority.</p>
+                    <div class="row" style="margin-top:25px;">
+                        <div class="col-sm-6 col-xs-12">
+                            <ul class="check-list" style="padding-left:0; list-style:none;">
+                                <li style="margin-bottom:12px; position:relative; padding-left:28px;">
+                                    <i class="fa fa-check-circle"
+                                        style="color:#fdd93a; position:absolute; left:0; top:2px;"></i>
+                                    Ex VicRoads Testing Officers
+                                </li>
+                                <li style="margin-bottom:12px; position:relative; padding-left:28px;">
+                                    <i class="fa fa-check-circle"
+                                        style="color:#fdd93a; position:absolute; left:0; top:2px;"></i>
+                                    Friendly & Patient Instructors
+                                </li>
+                                <li style="margin-bottom:12px; position:relative; padding-left:28px;">
+                                    <i class="fa fa-check-circle"
+                                        style="color:#fdd93a; position:absolute; left:0; top:2px;"></i>
+                                    Remarkable Success Rate
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <ul class="check-list" style="padding-left:0; list-style:none;">
+                                <li style="margin-bottom:12px; position:relative; padding-left:28px;">
+                                    <i class="fa fa-check-circle"
+                                        style="color:#fdd93a; position:absolute; left:0; top:2px;"></i>
+                                    ADTA Qualified Instructors
+                                </li>
+                                <li style="margin-bottom:12px; position:relative; padding-left:28px;">
+                                    <i class="fa fa-check-circle"
+                                        style="color:#fdd93a; position:absolute; left:0; top:2px;"></i>
+                                    Specialized Test Training
+                                </li>
+                                <li style="margin-bottom:12px; position:relative; padding-left:28px;">
+                                    <i class="fa fa-check-circle"
+                                        style="color:#fdd93a; position:absolute; left:0; top:2px;"></i>
+                                    100% Satisfying Outcome
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="book.html" class="btn btn-accent"
+                        style="background:#fdd93a; color:#222; font-weight:600; padding:12px 32px; border-radius:4px; margin-top:30px; font-size:17px; letter-spacing:1px;">BOOK
+                        NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" style="background:#fafafa; padding:60px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 style="font-weight:600;">Our Driving Packages</h2>
+                    <div class="divider" style="width:200px; margin:18px auto;">
+                        <i class="fa fa-thumbs-up" style="color:#fdd93a; font-size:30px;"></i>
+                    </div>
+                    <p class="lead" style="color:#666;">Are you looking to get the best value for your driving lessons?
+                    </p>
+                </div>
+            </div>
+            <div class="row" style="margin-top:40px;">
+                <div class="col-sm-3 col-xs-12">
+                    <div class="price-table"
+                        style="background:#fff; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.04); margin-bottom:30px;">
+                        <div class="price-table-name"
+                            style="background:#111; color:#fff; border-radius:8px 8px 0 0; padding:15px 0;">
+                            <h3 style="margin:0; font-size:20px; font-weight:500;">1 LESSON</h3>
+                        </div>
+                        <div class="price-table-price" style="padding:40px 0 0 0;">
+                            <span class="figure"
+                                style="font-weight:600;font-size:34px;line-height:44px;color:#fd563a;">$65</span>
+                            <span class="term" style="font-weight:400;font-size:16px;line-height:28px;">/45
+                                Minutes</span>
+                        </div>
+                        <div class="price-table-features" style="padding:25px;">
+                            <ul style="padding-left:0; list-style:none;">
+                                <li style="margin-bottom:10px;"><span class="currency-icon">$70</span> for 60 Minutes
+                                </li>
+                                <li><span class="currency-icon">$90</span> for 90 Minutes</li>
+                            </ul>
+                            <a href="book.html" class="btn btn-custom btn-block"
+                                style="background:#fdd93a; color:#222; font-weight:600; margin-top:15px;">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div class="price-table"
+                        style="background:#fff; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.04); margin-bottom:30px;">
+                        <div class="price-table-name"
+                            style="background:#111; color:#fff; border-radius:8px 8px 0 0; padding:15px 0;">
+                            <h3 style="margin:0; font-size:20px; font-weight:500;">5 LESSONS</h3>
+                        </div>
+                        <div class="price-table-price" style="padding:40px 0 0 0;">
+                            <span class="figure"
+                                style="font-weight:600;font-size:34px;line-height:44px;color:#fd563a;">$315</span>
+                            <span class="term" style="font-weight:400;font-size:16px;line-height:28px;">/45
+                                Minutes</span>
+                        </div>
+                        <div class="price-table-features" style="padding:25px;">
+                            <ul style="padding-left:0; list-style:none;">
+                                <li style="margin-bottom:10px;"><span class="currency-icon">$330</span> for 60 Minutes
+                                </li>
+                                <li><span class="currency-icon">$440</span> for 90 Minutes</li>
+                            </ul>
+                            <a href="book.html" class="btn btn-custom btn-block"
+                                style="background:#fdd93a; color:#222; font-weight:600; margin-top:15px;">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div class="price-table"
+                        style="background:#fff; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.04); margin-bottom:30px;">
+                        <div class="price-table-name"
+                            style="background:#111; color:#fff; border-radius:8px 8px 0 0; padding:15px 0;">
+                            <h3 style="margin:0; font-size:20px; font-weight:500;">10 LESSONS</h3>
+                        </div>
+                        <div class="price-table-price" style="padding:40px 0 0 0;">
+                            <span class="figure"
+                                style="font-weight:600;font-size:34px;line-height:44px;color:#fd563a;">$615</span>
+                            <span class="term" style="font-weight:400;font-size:16px;line-height:28px;">/45
+                                Minutes</span>
+                        </div>
+                        <div class="price-table-features" style="padding:25px;">
+                            <ul style="padding-left:0; list-style:none;">
+                                <li style="margin-bottom:10px;"><span class="currency-icon">$640</span> for 60 Minutes
+                                </li>
+                                <li><span class="currency-icon">$870</span> for 90 Minutes</li>
+                            </ul>
+                            <a href="book.html" class="btn btn-custom btn-block"
+                                style="background:#fdd93a; color:#222; font-weight:600; margin-top:15px;">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div class="price-table"
+                        style="background:#fff; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.04); margin-bottom:30px;">
+                        <div class="price-table-name"
+                            style="background:#111; color:#fff; border-radius:8px 8px 0 0; padding:15px 0;">
+                            <h3 style="margin:0; font-size:20px; font-weight:500;">DRIVE TEST</h3>
+                        </div>
+                        <div class="price-table-price" style="padding:40px 0 0 0;">
+                            <span class="figure"
+                                style="font-weight:600;font-size:34px;line-height:44px;color:#fd563a;">$220</span>
+                        </div>
+                        <div class="price-table-features" style="padding:25px;">
+                            <a href="book.html" class="btn btn-custom btn-block"
+                                style="background:#fdd93a; color:#222; font-weight:600; margin-top:15px;">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:10px;">
+                <div class="col-sm-3 col-xs-12">
+                    <div class="price-table"
+                        style="background:#fff; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.04); margin-bottom:30px;">
+                        <div class="price-table-name"
+                            style="background:#111; color:#fff; border-radius:8px 8px 0 0; padding:15px 0;">
+                            <h3 style="margin:0; font-size:20px; font-weight:500;">EXPRESS TEST</h3>
+                        </div>
+                        <div class="price-table-price" style="padding:40px 0 0 0;">
+                            <span class="figure"
+                                style="font-weight:600;font-size:34px;line-height:44px;color:#fd563a;">$350</span>
+                            <span class="term" style="font-weight:400;font-size:16px;line-height:28px;">/Test + 3
+                                Lessons (60 Mins)</span>
+                        </div>
+                        <div class="price-table-features" style="padding:25px;">
+                            <ul style="padding-left:0; list-style:none;">
+                                <li style="margin-bottom:10px;"><span class="currency-icon">$470</span> for Test + 5
+                                    Lessons (60 Mins)</li>
+                                <li><span class="currency-icon">$770</span> Test + 10 Lessons (60 Mins)</li>
+                            </ul>
+                            <a href="book.html" class="btn btn-custom btn-block"
+                                style="background:#fdd93a; color:#222; font-weight:600; margin-top:15px;">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div class="price-table"
+                        style="background:#fff; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.04); margin-bottom:30px;">
+                        <div class="price-table-name"
+                            style="background:#111; color:#fff; border-radius:8px 8px 0 0; padding:15px 0;">
+                            <h3 style="margin:0; font-size:20px; font-weight:500;">ASSESSMENT LESSON</h3>
+                        </div>
+                        <div class="price-table-price" style="padding:40px 0 0 0;">
+                            <span class="figure"
+                                style="font-weight:600;font-size:34px;line-height:44px;color:#fd563a;">$120</span>
+                        </div>
+                        <div class="price-table-features" style="padding:25px;">
+                            <a href="book.html" class="btn btn-custom btn-block"
+                                style="background:#fdd93a; color:#222; font-weight:600; margin-top:15px;">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+
+    <section class="stats-section"
+        style="background: linear-gradient(90deg, #fdd93a 0%, #fffbe7 100%); padding: 60px 0;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="stat-box"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.05); padding:32px 10px 28px; margin-bottom:20px;">
+                        <div class="number accent" style="font-size:48px; font-weight:700; color:#fdd93a;">8000+</div>
+                        <h4 style="font-size:18px; font-weight:500; color:#222; margin-top:12px;">Training Hours</h4>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="stat-box"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.05); padding:32px 10px 28px; margin-bottom:20px;">
+                        <div class="number accent" style="font-size:48px; font-weight:700; color:#fdd93a;">99%</div>
+                        <h4 style="font-size:18px; font-weight:500; color:#222; margin-top:12px;">Pass Rate</h4>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="stat-box"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.05); padding:32px 10px 28px; margin-bottom:20px;">
+                        <div class="number accent" style="font-size:48px; font-weight:700; color:#fdd93a;">5+</div>
+                        <h4 style="font-size:18px; font-weight:500; color:#222; margin-top:12px;">Working Years</h4>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="stat-box"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.05); padding:32px 10px 28px; margin-bottom:20px;">
+                        <div class="number accent" style="font-size:48px; font-weight:700; color:#fdd93a;">2500+</div>
+                        <h4 style="font-size:18px; font-weight:500; color:#222; margin-top:12px;">Licenses Issued</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+
+    <section class="gallery-section" style="background: #f9f9f9; padding: 60px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 style="font-weight:700; color:#222;">Success Stories</h2>
+                    <div class="divider"
+                        style="width:80px; height:4px; background:#fdd93a; margin:18px auto 24px auto; border-radius:2px;">
+                    </div>
+                    <p class="lead" style="color:#555;">Our success stories showcase the satisfaction of our clients who
+                        have completed their journey by passing their driving test.</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px;">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="gallery-item"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); margin-bottom:30px; overflow:hidden; transition:box-shadow .2s;">
+                        <img src="https://imperialdrivingschool.com.au/wp-content/uploads/2022/03/275263181_113928687894519_5008969326952168914_n-590x550.jpg"
+                            alt="Success Story" class="img-responsive"
+                            style="border-radius:10px 10px 0 0; width:100%; height:220px; object-fit:cover;">
+                        <div style="padding:12px 10px 8px 10px; text-align:center;">
+                            <span style="font-size:15px; color:#fdd93a; font-weight:600;">Passed First Attempt!</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="gallery-item"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); margin-bottom:30px; overflow:hidden; transition:box-shadow .2s;">
+                        <img src="https://imperialdrivingschool.com.au/wp-content/uploads/2022/03/275381803_115323604421694_6552805835389754007_n-590x550.jpg"
+                            alt="Success Story" class="img-responsive"
+                            style="border-radius:10px 10px 0 0; width:100%; height:220px; object-fit:cover;">
+                        <div style="padding:12px 10px 8px 10px; text-align:center;">
+                            <span style="font-size:15px; color:#fdd93a; font-weight:600;">Happy New Driver</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="gallery-item"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); margin-bottom:30px; overflow:hidden; transition:box-shadow .2s;">
+                        <img src="https://imperialdrivingschool.com.au/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-07-at-6.35.29-PM-590x550.jpeg"
+                            alt="Success Story" class="img-responsive"
+                            style="border-radius:10px 10px 0 0; width:100%; height:220px; object-fit:cover;">
+                        <div style="padding:12px 10px 8px 10px; text-align:center;">
+                            <span style="font-size:15px; color:#fdd93a; font-weight:600;">Another Success</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="gallery-item"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); margin-bottom:30px; overflow:hidden; transition:box-shadow .2s;">
+                        <img src="https://imperialdrivingschool.com.au/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-07-at-6.35.30-PM-590x550.jpeg"
+                            alt="Success Story" class="img-responsive"
+                            style="border-radius:10px 10px 0 0; width:100%; height:220px; object-fit:cover;">
+                        <div style="padding:12px 10px 8px 10px; text-align:center;">
+                            <span style="font-size:15px; color:#fdd93a; font-weight:600;">Proud Graduate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="background: linear-gradient(90deg, #fdd93a 0%, #fffbe7 100%); padding: 60px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 style="font-weight:700; color:#222;">Learn Driving with <strong>Imperial Driving School</strong>
+                    </h2>
+                    <p class="lead" style="color:#555; margin-bottom:30px;">Give us a call to schedule your first
+                        driving lesson.</p>
+                    <a href="tel:+61450984700" class="btn btn-lg"
+                        style="background:#222; color:#fff; font-weight:600; padding:14px 38px; border-radius:4px; font-size:20px;">
+                        <i class="fa fa-phone" style="color:#fdd93a; margin-right:10px;"></i> +61 045 098 4700
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" style="background:#f9f9f9; padding:60px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 style="font-weight:700; color:#222;">Testimonials</h2>
+                    <div class="divider"
+                        style="width:80px; height:4px; background:#fdd93a; margin:18px auto 24px auto; border-radius:2px;">
+                    </div>
+                    <p class="lead" style="color:#555;">Here's what our happy drivers had to say about our services.</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px;">
+                <div class="col-sm-4">
+                    <div class="testimonial-box"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); padding:36px 28px 30px 28px; margin-bottom:30px;">
+                        <blockquote
+                            style="font-size:16px; color:#444; border-left:4px solid #fdd93a; padding-left:18px;">
+                            "Imperial Driving School really helped build my confidence behind the wheel and with driving
+                            in general, and they got me a first time pass! Highly recommended."
+                        </blockquote>
+                        <div class="testimonial-author" style="margin-top:18px;">
+                            <h4 style="font-weight:600; color:#fdd93a; margin:0;">Shahzad Nisar</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="testimonial-box"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); padding:36px 28px 30px 28px; margin-bottom:30px;">
+                        <blockquote
+                            style="font-size:16px; color:#444; border-left:4px solid #fdd93a; padding-left:18px;">
+                            "I passed my test today, first time. It was a great experience, Mehran was extremely patient
+                            and calm. He has enabled me to gain the confidence needed to drive independently after my
+                            test. Thank you Mehran."
+                        </blockquote>
+                        <div class="testimonial-author" style="margin-top:18px;">
+                            <h4 style="font-weight:600; color:#fdd93a; margin:0;">Richa Singh</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="testimonial-box"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); padding:36px 28px 30px 28px; margin-bottom:30px;">
+                        <blockquote
+                            style="font-size:16px; color:#444; border-left:4px solid #fdd93a; padding-left:18px;">
+                            "It was a good experience with my instructor. He has helped me gain the confidence to be on
+                            the road safely. He is a very good instructor, with a good knowledge of the area around
+                            Melbourne."
+                        </blockquote>
+                        <div class="testimonial-author" style="margin-top:18px;">
+                            <h4 style="font-weight:600; color:#fdd93a; margin:0;">Ashuk</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background:#181818; color:#ccc; padding:50px 0 30px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" style="margin-bottom:30px;">
+                    <div class="footer-widget">
+                        <div class="footer-logo" style="margin-bottom:18px;">
+                            <img src="logo.jpeg" alt="Hassan's Driving School - Learn, Drive, Pass"
+                                class="img-responsive" style="max-width:140px;">
+                        </div>
+                        <p style="color:#ccc; font-size:15px;">
+                            We have been serving driving education with more branches and completed 2k+ students in last
+                            4 years. We have a team of experienced and certified trainers who will help you from the
+                            start to end of a driving lesson.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-1" style="margin-bottom:30px;">
+                    <div class="footer-widget">
+                        <h3 style="color:#fff; font-size:20px; font-weight:600; margin-bottom:18px;">Contact Us</h3>
+                        <ul class="footer-contact" style="padding-left:0; list-style:none; font-size:15px;">
+                            <li class="address" style="margin-bottom:14px;">
+                                <i class="fa fa-map-marker" style="width:22px; color:#fdd93a;"></i>
+                                <span>283 sunshine avenue St. Albans</span>
+                            </li>
+                            <li class="email" style="margin-bottom:14px;">
+                                <i class="fa fa-envelope" style="width:22px; color:#fdd93a;"></i>
+                                <span>booking@imperialdrivingschool.com.au</span>
+                            </li>
+                            <li class="phone">
+                                <i class="fa fa-phone" style="width:22px; color:#fdd93a;"></i>
+                                <span>Mobile 045 098 4700</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-bottom:30px;">
+                    <div class="footer-widget">
+                        <img src="https://imperialdrivingschool.com.au/wp-content/uploads/2023/02/KDS-google-reviews-300x115.png"
+                            alt="Google Reviews" class="img-responsive" style="max-width:180px; border-radius:6px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar" style="background:#111; color:#aaa; padding:18px 0; font-size:15px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div id="copyright">
+                        © 2022 IMPERIAL DRIVING SCHOOL. All rights reserved. | Developed by
+                        <a href="https://www.anifar.com" target="_blank"
+                            style="color:#fdd93a; text-decoration:none;">Flow Technologies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        // Smooth scrolling for anchor links
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

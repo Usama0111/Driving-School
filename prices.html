@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Imperial Driving School</title>
+    <!-- Bootstrap 3 CSS for consistency with other pages -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet">
+    <!-- Common CSS for header, topbar, footer, colors, etc. -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- Custom Header & Topbar CSS -->
+    <link rel="stylesheet" href="css/header-topbar.css">
+
+    <style>
+        /* Only page-specific or section-specific styles below */
+        .hero-section {
+            background: url('https://imperialdrivingschool.com.au/wp-content/uploads/2022/02/section_bg3.jpg') center bottom no-repeat fixed;
+            background-size: cover;
+            padding: 100px 0;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-section h1,
+        .hero-section .breadcrumb {
+            position: relative;
+            z-index: 2;
+        }
+
+        .breadcrumb {
+            background: transparent;
+            padding: 8px 0;
+            margin-bottom: 0;
+            color: #ccc;
+        }
+
+        .breadcrumb a {
+            color: #ccc;
+        }
+
+        .breadcrumb>li+li:before {
+            color: #ccc;
+        }
+
+        .divider-custom {
+            width: 200px;
+            margin: 0 auto 18px;
+            position: relative;
+            text-align: center;
+        }
+
+        .divider-custom:before,
+        .divider-custom:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 80px;
+            height: 1px;
+            background-color: #a0a0a0;
+            border-top: 1px dotted #a0a0a0;
+            border-bottom: 1px dotted #a0a0a0;
+        }
+
+        .divider-custom:before {
+            left: 0;
+        }
+
+        .divider-custom:after {
+            right: 0;
+        }
+
+        .divider-icon {
+            color: #fdd93a;
+            font-size: 30px;
+        }
+
+        .pricing-section {
+            padding: 80px 0;
+        }
+
+        .price-table {
+            background-color: #f5f5f5;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+            border-radius: 0;
+            border: none;
+        }
+
+        .price-table:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-table-name {
+            padding: 20px 0;
+        }
+
+        .price-table-name h3 {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .price-table-price {
+            padding: 50px 0 0;
+            background-color: #f4f4f4;
+        }
+
+        .price-table-price .figure {
+            font-size: 34px;
+            font-weight: 600;
+            color: #fdd93a;
+            line-height: 44px;
+        }
+
+        .price-table-features {
+            padding: 30px 25px 50px;
+            background-color: #f5f5f5;
+        }
+
+        .price-big {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fdd93a;
+        }
+
+        .btn-custom {
+            background-color: #fdd93a;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .btn-custom:hover {
+            background-color: #dde034;
+            color: white;
+        }
+
+        .testimonial-box {
+            background-color: #f3f3f3;
+            padding: 40px 50px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .testimonial-box:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 50px;
+            border-top: 20px solid #f3f3f3;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+        }
+
+        .footer {
+            background-color: #1d1d1d;
+            color: #ccc;
+            padding: 63px 0 24px;
+        }
+
+        .footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .footer-title {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #363636;
+        }
+
+        .contact-item {
+            margin-bottom: 22px;
+            padding-left: 38px;
+            position: relative;
+        }
+
+        .contact-item i {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 18px;
+        }
+
+        .bottom-bar {
+            background-color: #111;
+            padding: 20px 0;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .phone-link {
+            color: white;
+            font-weight: 700;
+            font-size: 26px;
+            text-decoration: none;
+        }
+
+        .phone-link:hover {
+            color: white;
+        }
+
+        .phone-icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6 text-right">
+                    <span style="margin-left:20px;">
+                        <a href="tel:+610450984700" style="color:#222;">045 098 4700</a>
+                    </span>
+                    <span class="social-icons" style="margin-left:20px;">
+                        <a href="https://www.facebook.com/Imperial-Driving-School-107136965240358" target="_blank"
+                            style="color:#222; margin-right:10px;">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/imperialdrivingschool/" target="_blank" style="color:#222;">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row" style="display: flex; align-items: center;">
+                <div class="col-xs-12 col-sm-3" style="display: flex; align-items: center;">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="logo.jpeg" alt="Hassan's Driving School - Learn, Drive, Pass"
+                                class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                    <nav class="navbar navbar-default" style="margin-bottom:0;">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#main-nav">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="main-nav">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="service.html">Service Areas</a></li>
+                                <li class="active"><a href="prices.html">Pricing</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li class="book-now-menu"><a href="book.html">Book Now</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1>Pricing</h1>
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Pricing</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" style="background:#fafafa; padding:60px 0;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom:48px;">
+                <h2 style="font-weight:700; color:#222; margin-bottom:12px;">Our Driving Packages</h2>
+                <div class="divider"
+                    style="width:80px; height:4px; background:#fdd93a; margin:18px auto 24px auto; border-radius:2px;">
+                </div>
+                <p class="lead" style="color:#555;">Are you looking to get the best value for your driving lessons?</p>
+            </div>
+            <div class="row" style="margin-bottom:20px;">
+                <!-- 1 Lesson -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="price-table"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); margin-bottom:30px; transition:box-shadow .2s;">
+                        <div class="price-table-name"
+                            style="background:#111; color:#fff; border-radius:10px 10px 0 0; padding:18px 0;">
+                            <h3 style="margin:0; font-size:20px; font-weight:600;">1 LESSON</h3>
+                        </div>
+                        <div class="price-table-price" style="padding:36px 0 0 0;">
+                            <span class="figure"
+                                style="font-weight:700;font-size:34px;line-height:44px;color:#fd563a;">$65</span>
+                            <span class="term" style="font-weight:400;font-size:16px;line-height:28px;">/45
+                                Minutes</span>
+                        </div>
+                        <div class="price-table-features" style="padding:22px;">
+                            <ul class="list-unstyled" style="margin-bottom:18px;">
+                                <li style="margin-bottom:8px;">$<span class="price-big">70</span> for 60 Minutes</li>
+                                <li>$<span class="price-big">90</span> for 90 Minutes</li>
+                            </ul>
+                            <a href="book.html" class="btn btn-custom btn-block"
+                                style="background:#fdd93a; color:#222; font-weight:600; border-radius:4px;">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 Lessons -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="price-table"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); margin-bottom:30px; transition:box-shadow .2s;">
+                        <div class="price-table-name"
+                            style="background:#111; color:#fff; border-radius:10px 10px 0 0; padding:18px 0;">
+                            <h3 style="margin:0; font-size:20px; font-weight:600;">5 LESSONS</h3>
+                        </div>
+                        <div class="price-table-price" style="padding:36px 0 0 0;">
+                            <span class="figure"
+                                style="font-weight:700;font-size:34px;line-height:44px;color:#fd563a;">$315</span>
+                            <span class="term" style="font-weight:400;font-size:16px;line-height:28px;">/45
+                                Minutes</span>
+                        </div>
+                        <div class="price-table-features" style="padding:22px;">
+                            <ul class="list-unstyled" style="margin-bottom:18px;">
+                                <li style="margin-bottom:8px;">$<span class="price-big">330</span> for 60 Minutes</li>
+                                <li>$<span class="price-big">440</span> for 90 Minutes</li>
+                            </ul>
+                            <a href="book.html" class="btn btn-custom btn-block"
+                                style="background:#fdd93a; color:#222; font-weight:600; border-radius:4px;">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 10 Lessons -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="price-table"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); margin-bottom:30px; transition:box-shadow .2s;">
+                        <div class="price-table-name"
+                            style="background:#111; color:#fff; border-radius:10px 10px 0 0; padding:18px 0;">
+                            <h3 style="margin:0; font-size:20px; font-weight:600;">10 LESSONS</h3>
+                        </div>
+                        <div class="price-table-price" style="padding:36px 0 0 0;">
+                            <span class="figure"
+                                style="font-weight:700;font-size:34px;line-height:44px;color:#fd563a;">$615</span>
+                            <span class="term" style="font-weight:400;font-size:16px;line-height:28px;">/45
+                                Minutes</span>
+                        </div>
+                        <div class="price-table-features" style="padding:22px;">
+                            <ul class="list-unstyled" style="margin-bottom:18px;">
+                                <li style="margin-bottom:8px;">$<span class="price-big">640</span> for 60 Minutes</li>
+                                <li>$<span class="price-big">870</span> for 90 Minutes</li>
+                            </ul>
+                            <a href="book.html" class="btn btn-custom btn-block"
+                                style="background:#fdd93a; color:#222; font-weight:600; border-radius:4px;">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Drive Test -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="price-table"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); margin-bottom:30px; transition:box-shadow .2s;">
+                        <div class="price-table-name"
+                            style="background:#111; color:#fff; border-radius:10px 10px 0 0; padding:18px 0;">
+                            <h3 style="margin:0; font-size:20px; font-weight:600;">DRIVE TEST</h3>
+                        </div>
+                        <div class="price-table-price" style="padding:36px 0 0 0;">
+                            <span class="figure"
+                                style="font-weight:700;font-size:34px;line-height:44px;color:#fd563a;">$220</span>
+                        </div>
+                        <div class="price-table-features" style="padding:22px;">
+                            <a href="book.html" class="btn btn-custom btn-block"
+                                style="background:#fdd93a; color:#222; font-weight:600; border-radius:4px;">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Express Test -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="price-table"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); margin-bottom:30px; transition:box-shadow .2s;">
+                        <div class="price-table-name"
+                            style="background:#111; color:#fff; border-radius:10px 10px 0 0; padding:18px 0;">
+                            <h3 style="margin:0; font-size:20px; font-weight:600;">EXPRESS TEST</h3>
+                        </div>
+                        <div class="price-table-price" style="padding:36px 0 0 0;">
+                            <span class="figure"
+                                style="font-weight:700;font-size:34px;line-height:44px;color:#fd563a;">$350</span>
+                            <span class="term" style="font-weight:400;font-size:16px;line-height:28px;">/Test + 3
+                                Lessons (60 Mins)</span>
+                        </div>
+                        <div class="price-table-features" style="padding:22px;">
+                            <ul class="list-unstyled" style="margin-bottom:18px;">
+                                <li style="margin-bottom:8px;">$<span class="price-big">470</span> for Test + 5 Lessons
+                                    (60 Mins)</li>
+                                <li>$<span class="price-big">770</span> Test + 10 Lessons (60 Mins)</li>
+                            </ul>
+                            <a href="book.html" class="btn btn-custom btn-block"
+                                style="background:#fdd93a; color:#222; font-weight:600; border-radius:4px;">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Assessment Lesson -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="price-table"
+                        style="background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.06); margin-bottom:30px; transition:box-shadow .2s;">
+                        <div class="price-table-name"
+                            style="background:#111; color:#fff; border-radius:10px 10px 0 0; padding:18px 0;">
+                            <h3 style="margin:0; font-size:20px; font-weight:600;">ASSESSMENT LESSON</h3>
+                        </div>
+                        <div class="price-table-price" style="padding:36px 0 0 0;">
+                            <span class="figure"
+                                style="font-weight:700;font-size:34px;line-height:44px;color:#fd563a;">$120</span>
+                        </div>
+                        <div class="price-table-features" style="padding:22px;">
+                            <a href="book.html" class="btn btn-custom btn-block"
+                                style="background:#fdd93a; color:#222; font-weight:600; border-radius:4px;">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer" style="background:#181818; color:#ccc; padding:50px 0 30px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" style="margin-bottom:30px;">
+                    <div class="footer-widget">
+                        <div class="footer-logo" style="margin-bottom:18px;">
+                            <img src="logo.jpeg" alt="Hassan's Driving School - Learn, Drive, Pass"
+                                class="img-responsive" style="max-width:140px;">
+                        </div>
+                        <p style="color:#ccc; font-size:15px;">
+                            We have been serving driving education with more branches and completed 2k+ students in last
+                            4 years. We have a team of experienced and certified trainers who will help you from the
+                            start to end of a driving lesson.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-1" style="margin-bottom:30px;">
+                    <div class="footer-widget">
+                        <h3 style="color:#fff; font-size:20px; font-weight:600; margin-bottom:18px;">Contact Us</h3>
+                        <ul class="footer-contact" style="padding-left:0; list-style:none; font-size:15px;">
+                            <li class="address" style="margin-bottom:14px;">
+                                <i class="fa fa-map-marker" style="width:22px; color:#fdd93a;"></i>
+                                <span>283 sunshine avenue St. Albans</span>
+                            </li>
+                            <li class="email" style="margin-bottom:14px;">
+                                <i class="fa fa-envelope" style="width:22px; color:#fdd93a;"></i>
+                                <span>booking@imperialdrivingschool.com.au</span>
+                            </li>
+                            <li class="phone">
+                                <i class="fa fa-phone" style="width:22px; color:#fdd93a;"></i>
+                                <span>Mobile 045 098 4700</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="margin-bottom:30px;">
+                    <div class="footer-widget">
+                        <img src="https://imperialdrivingschool.com.au/wp-content/uploads/2023/02/KDS-google-reviews-300x115.png"
+                            alt="Google Reviews" class="img-responsive" style="max-width:180px; border-radius:6px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar" style="background:#111; color:#aaa; padding:18px 0; font-size:15px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div id="copyright">
+                        © 2022 IMPERIAL DRIVING SCHOOL. All rights reserved. | Developed by
+                        <a href="https://www.anifar.com" target="_blank"
+                            style="color:#fdd93a; text-decoration:none;">Flow Technologies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
